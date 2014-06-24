@@ -1,0 +1,372 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,900,800);
+
+html, body
+{
+    height: 100%;
+    width: 100%;
+    margin:0;
+  	padding:0;
+    overflow: hidden;
+}
+body {
+	top: 0%;
+	left: 0%;  
+	background-color: #ffffff;
+}
+
+
+.noPadding{
+	padding: 0px 0px 0px 0px;
+}
+.noMargin{
+	margin: 0px 0px
+}
+.positionRelativeFull{
+	position:relative;
+	top: 0%;
+	left: 0%;  
+	height: 100%;
+    width: 100%;
+}
+.box{
+	position: absolute; 
+    top: 0%;
+	right: 0%;    
+	height: 100%;   
+	width: 0%; 
+	opacity: 0;
+	z-index: 2;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	transition: all 1s ease;
+}
+
+.projDiv{
+	display: block;
+	position:relative;
+	top: 0%;
+	left: 0%;  
+	height: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    /*background: #47454D;*/
+}
+.projDiv.hidden{
+	display: none;
+}
+
+.projColEnterprise{
+	position:relative;
+	height: 100%;
+	min-height: 50%;
+	max-height: 100%;
+	background-image:url('img/thumb_pwc.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	padding: 0 0 0 0;
+}
+.projColEntertainment{
+	position:relative;
+	height: 100%;
+	min-height: 50%;
+	max-height: 100%;
+	background-image:url('img/thumb_pwc.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	padding: 0 0 0 0;
+}
+.projColKids{
+	position:relative;
+	height: 100%;
+	min-height: 50%;
+	max-height: 100%;
+	background-image:url('img/thumb_pwc.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	padding: 0 0 0 0;
+}
+.projColMarketing{
+	position:relative;
+	height: 100%;
+	min-height: 50%;
+	max-height: 100%;
+	background-image:url('img/thumb_pwc.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center center;
+	padding: 0 0 0 0;
+}
+
+.projInnerCol{
+	position:relative;   
+    opacity: 0.5;
+    height: 100%;   
+	width: 100%; 
+}
+.projInnerCol2{
+	position:absolute;   
+	top:0%;
+    height: 100%;   
+	width: 100%;
+	z-index: 1;
+}
+.projTitle {
+	position: relative; 
+	top:40%;
+	text-align:center;
+	letter-spacing:1px;
+	color: #FFF;
+	font-family: proxima-nova-n9, proxima-nova, sans-serif;
+	font-style: normal;
+	font-weight: bold;
+	font-size:1.5em;
+	text-transform: uppercase;
+}
+.projSubTitle {
+	position: relative; 
+	top:40%;
+	text-align:center;
+	letter-spacing:1px;
+	color: #FFF;
+	font-family: proxima-nova-n9, proxima-nova, sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size:1em;
+	text-transform: uppercase;
+}
+.projButton{
+    position:absolute;   
+    opacity: 0;
+    height: 100%;   
+	width: 100%;
+	top: 0%;
+	z-index: 2;
+}
+
+.slideInOrangeBox{
+	background: #e07b00;
+	width: 100%; 
+	opacity: 1;
+}
+.slideInLightBlueBox{
+	background: #45b6d1;
+	width: 100%; 
+	opacity: 1;
+}
+.slideInPurpleBox{
+	background: #564e60;
+	width: 100%; 
+	opacity: 1;
+}
+.slideInBlueBox{
+	background: #144089;
+	width: 100%; 
+	opacity: 1;
+}
+.slideInRedBox{
+	background: #CC3333;
+	width: 100%; 
+	opacity: 1;
+}
+.contentDivPaddingTop{
+	padding: 30px 0px 50px 0px;
+}
+.contentDivPaddingMiddle{
+	padding: 0px 0px 50px 0px;
+}
+.contentDivPaddingBottom{
+	padding: 0px 0px 100px 0px;
+}
+.contentImgFloatLeft{
+	position: relative;  
+	height: auto;
+	width: auto;
+	max-width: 100%;
+	max-height: auto;
+	padding: 0px 20px 0px 20px;
+}
+.contentTextFloatLeft{
+	position: relative;  
+	display: inline;
+	color: #ffffff;
+	font-family: 'Raleway', 'sans-serif';
+	font-style: normal;
+	font-weight: normal;
+	font-size:1em;
+	line-height: 180%;
+	padding: 50px 20px 0px 20px;
+}
+
+.enterpriseContentBkgImg{
+	position: absolute;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+	background-color: #4c4b53;
+	/*opacity: 0.8;*/
+	/*background-image:url('img/enterpriseBkg.png');
+	background-repeat:no-repeat;
+	background-size: 100% 100%;*/
+}
+.enterpriseContentBkgColor{
+	position: relative;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+}
+.enterpriseContent{
+	position: absolute;
+    top: 60px;
+	left: 0;    
+	height: 90%;   
+	width: 100%; 
+	z-index: 1;
+	overflow:scroll;
+}
+
+.entertainmentContentBkgImg{
+	position: absolute;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+	background-color: #4c4b53;
+	/*background-image:url('img/entertainmentBkg.png');
+	background-repeat:no-repeat;
+	background-size: 100% 100%;*/
+}
+.entertainmentContentBkgColor{
+	position: relative;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%;
+}
+.entertainmentContent{
+	position: absolute;
+    top: 60px;
+	left: 0;    
+	height: 90%;   
+	width: 100%; 
+	z-index: 1;
+	overflow:scroll;
+}
+
+.kidsContentBkgImg{
+	position: absolute;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+	background-color: #4c4b53;
+	/*background-image:url('img/kidsBkg.png');
+	background-repeat:no-repeat;
+	background-size: 100% 100%;*/
+}
+.kidsContentBkgColor{
+	position: relative;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%;
+}
+.kidsContent{
+	position: absolute;
+    top: 60px;
+	left: 0;    
+	height: 90%;   
+	width: 100%; 
+	z-index: 1;
+	overflow:scroll;
+}
+
+.marketingContentBkgImg{
+	position: absolute;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+	background-color: #4c4b53;
+	/*background-image:url('img/pharmaceuticalBkg.png');
+	background-repeat:no-repeat;
+	background-size: 100% 100%;*/
+}
+.marketingContentBkgColor{
+	position: relative;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%;
+}
+.marketingContent{
+	position: absolute;
+    top: 60px;
+	left: 0;    
+	height: 90%;   
+	width: 100%; 
+	z-index: 1;
+	overflow:scroll;
+}
+
+
+.contactContentBkgImg{
+	position: absolute;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%; 
+	background-color: #4c4b53;
+	/*background-image:url('img/pharmaceuticalBkg.png');
+	background-repeat:no-repeat;
+	background-size: 100% 100%;*/
+}
+.contactContentBkgColor{
+	position: relative;
+    top: 0%;
+	left: 0%;    
+	height: 100%;   
+	width: 100%;
+}
+.contactContent{
+	position: absolute;
+    top: 60px;
+	left: 0;    
+	height: 90%;   
+	width: 100%; 
+	z-index: 1;
+	overflow:scroll;
+}
+
+.navDiv{
+	position: absolute;
+	top: 0;
+	left:0;
+	border: 2px soild
+}
+
+.hide{
+	display: none;
+}
+.reveal{
+	display: block;
+}
+
+.navButton{
+	position: absolute;
+	top:0;
+	left: 80%;	
+	width: 100%;
+	border: 2px solid;
+	z-index: 3;
+}
+
+
+
+
+
