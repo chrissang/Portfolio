@@ -2,6 +2,11 @@ console.log('test.js ran');
 //sections:[home,enterprise,entertainment,kids,marketing]
 var section = "home";
 var sectionObj = new Object();
+
+sectionObj.section = 'home';
+sectionObj.boxColor = '';
+
+console.log(sectionObj);
 function boxAnimation(boxColor){
     if (boxColor == 'orange') {
         //adding boxColor and section to sectionObj
@@ -31,7 +36,7 @@ function boxAnimation(boxColor){
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("entertaimentView").style.display="block";
+            document.getElementById("entertainmentView").style.display="block";
         },1200);
     }
     else if (boxColor == 'purple') {
@@ -82,7 +87,12 @@ function boxAnimation(boxColor){
 }
 
 function homeLink() {
-    if (sectionObj.section == 'enterprise') {
+    if (sectionObj.section == 'home') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+    }
+    else if (sectionObj.section == 'enterprise') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -91,7 +101,7 @@ function homeLink() {
         sectionObj.boxColor = '';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInOrangeBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("enterpriseView").style.display="none";
         },1000);
@@ -109,9 +119,9 @@ function homeLink() {
         sectionObj.boxColor = '';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInLightBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
-            document.getElementById("entertaimentView").style.display="none";
+            document.getElementById("entertainmentView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -145,9 +155,27 @@ function homeLink() {
         sectionObj.boxColor = '';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("marketingView").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("columnDiv").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'home';
+        sectionObj.boxColor = '';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("contactView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -156,7 +184,25 @@ function homeLink() {
     };
 }
 function enterpriseLink() {
-    if (sectionObj.section == 'enterprise') {
+    if (sectionObj.section == 'home') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'enterprise';
+        sectionObj.boxColor = 'orange';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("columnDiv").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("enterpriseView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'enterprise') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -170,9 +216,9 @@ function enterpriseLink() {
         sectionObj.boxColor = 'orange';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInLightBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
-            document.getElementById("entertaimentView").style.display="none";
+            document.getElementById("entertainmentView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -206,9 +252,27 @@ function enterpriseLink() {
         sectionObj.boxColor = 'orange';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("marketingView").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("enterpriseView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'enterprise';
+        sectionObj.boxColor = 'orange';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("contactView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -217,7 +281,25 @@ function enterpriseLink() {
     };
 }
 function entertainmentLink() {
-    if (sectionObj.section == 'entertainment') {
+    if (sectionObj.section == 'home') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'entertainment';
+        sectionObj.boxColor = 'lightBlue';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("columnDiv").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("entertainmentView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'entertainment') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -231,13 +313,13 @@ function entertainmentLink() {
         sectionObj.boxColor = 'lightBlue';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInOrangeBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("enterpriseView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("entertaimentView").style.display="block";
+            document.getElementById("entertainmentView").style.display="block";
         },1200);
     }
     else if (sectionObj.section == 'kids') {
@@ -255,7 +337,7 @@ function entertainmentLink() {
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("entertaimentView").style.display="block";
+            document.getElementById("entertainmentView").style.display="block";
         },1200);
     }
     else if (sectionObj.section == 'marketing') {
@@ -267,18 +349,54 @@ function entertainmentLink() {
         sectionObj.boxColor = 'lightBlue';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("marketingView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("entertaimentView").style.display="block";
+            document.getElementById("entertainmentView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'entertainment';
+        sectionObj.boxColor = 'lightBlue';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("contactView").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("entertainmentView").style.display="block";
         },1200);
     };
 }
 function kidsLink() {
-    if (sectionObj.section == 'kids') {
+    if (sectionObj.section == 'home') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'kids';
+        sectionObj.boxColor = 'purple';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("columnDiv").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("kidsView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'kids') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -292,7 +410,7 @@ function kidsLink() {
         sectionObj.boxColor = 'purple';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInOrangeBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("enterpriseView").style.display="none";
         },1000);
@@ -301,7 +419,7 @@ function kidsLink() {
             document.getElementById("kidsView").style.display="block";
         },1200);
     }
-    else if (sectionObj.section == 'entertaiment') {
+    else if (sectionObj.section == 'entertainment') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -310,9 +428,9 @@ function kidsLink() {
         sectionObj.boxColor = 'purple';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInLightBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
-            document.getElementById("entertaimentView").style.display="none";
+            document.getElementById("entertainmentView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -328,9 +446,27 @@ function kidsLink() {
         sectionObj.boxColor = 'purple';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("marketingView").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("kidsView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'kids';
+        sectionObj.boxColor = 'purple';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("contactView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -339,7 +475,25 @@ function kidsLink() {
     };
 }
 function marketingLink() {
-    if (sectionObj.section == 'marketing') {
+    if (sectionObj.section == 'home') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'marketing';
+        sectionObj.boxColor = 'blue';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("columnDiv").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("marketingView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'marketing') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -353,7 +507,7 @@ function marketingLink() {
         sectionObj.boxColor = 'blue';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInOrangeBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("enterpriseView").style.display="none";
         },1000);
@@ -371,9 +525,9 @@ function marketingLink() {
         sectionObj.boxColor = 'blue';
         console.log(sectionObj);
 
-        document.getElementById("demo").className += " slideInLightBlueBox";
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
-            document.getElementById("entertaimentView").style.display="none";
+            document.getElementById("entertainmentView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -392,6 +546,24 @@ function marketingLink() {
         document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("kidsView").style.display="none";
+        },1000);
+        setTimeout(function(){
+            document.getElementById("demo").className = "box";
+            document.getElementById("marketingView").style.display="block";
+        },1200);
+    }
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+
+        sectionObj.section = 'marketing';
+        sectionObj.boxColor = 'blue';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
+        setTimeout(function(){
+            document.getElementById("contactView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
@@ -400,15 +572,16 @@ function marketingLink() {
     };
 }
 function contactLink() {
-    sectionObj.section = 'content';
-    sectionObj.boxColor = 'red';
-    console.log(sectionObj);
-    if (sectionObj.section == 'content') {
+    if (sectionObj.section == 'home') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
 
-        document.getElementById("demo").className += " slideInRedBox";
+        sectionObj.section = 'content';
+        sectionObj.boxColor = 'red';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("columnDiv").style.display="none";
         },1000);
@@ -417,21 +590,27 @@ function contactLink() {
             document.getElementById("contactView").style.display="block";
         },1200);
     }
-}
-
-function closeNav() {
-    if (sectionObj.section == 'enterprise') {
+    else if (sectionObj.section == 'content') {
+        var navContainer = document.getElementById( 'st-container' );
+        console.log(navContainer);
+        classie.remove( navContainer, 'st-menu-open' );
+    }
+    else if (sectionObj.section == 'enterprise') {
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
 
-        document.getElementById("demo").className += " slideInOrangeBox";
+        sectionObj.section = 'content';
+        sectionObj.boxColor = 'red';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("enterpriseView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("columnDiv").style.display="block";
+            document.getElementById("contactView").style.display="block";
         },1200);
     }
     else if (sectionObj.section == 'entertainment') {
@@ -439,13 +618,17 @@ function closeNav() {
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
 
-        document.getElementById("demo").className += " slideInLightBlueBox";
+        sectionObj.section = 'content';
+        sectionObj.boxColor = 'red';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
-            document.getElementById("entertaimentView").style.display="none";
+            document.getElementById("entertainmentView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("columnDiv").style.display="block";
+            document.getElementById("contactView").style.display="block";
         },1200);
     }
     else if (sectionObj.section == 'kids') {
@@ -453,13 +636,17 @@ function closeNav() {
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
 
+        sectionObj.section = 'content';
+        sectionObj.boxColor = 'red';
+        console.log(sectionObj);
+
         document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("kidsView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("columnDiv").style.display="block";
+            document.getElementById("contactView").style.display="block";
         },1200);
     }
     else if (sectionObj.section == 'marketing') {
@@ -467,17 +654,20 @@ function closeNav() {
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
 
-        document.getElementById("demo").className += " slideInBlueBox";
+        sectionObj.section = 'content';
+        sectionObj.boxColor = 'red';
+        console.log(sectionObj);
+
+        document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("marketingView").style.display="none";
         },1000);
         setTimeout(function(){
             document.getElementById("demo").className = "box";
-            document.getElementById("columnDiv").style.display="block";
+            document.getElementById("contactView").style.display="block";
         },1200);
     };
 }
-
 
 
 
