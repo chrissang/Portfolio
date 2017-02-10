@@ -93,6 +93,7 @@ function homeLink() {
         classie.remove( navContainer, 'st-menu-open' );
     }
     else if (sectionObj.section == 'enterprise') {
+        console.log('home enterprise');
         var navContainer = document.getElementById( 'st-container' );
         console.log(navContainer);
         classie.remove( navContainer, 'st-menu-open' );
@@ -669,6 +670,11 @@ function contactLink() {
     };
 }
 
+function testing() {
+    console.log('FTS');
+    // $('#enterpriseView').scrollTop(0);
+    
+}
 
 
 
