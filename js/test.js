@@ -1,4 +1,5 @@
 console.log('test.js ran');
+console.log('zzzzzzzzzzzz');
 //sections:[home,enterprise,entertainment,kids,marketing]
 var section = "home";
 var sectionObj = new Object();
@@ -44,7 +45,7 @@ function boxAnimation(boxColor){
         sectionObj.section = 'kids';
         sectionObj.boxColor = boxColor;
         console.log(sectionObj);
-        
+
         document.getElementById("demo").className += " slideInPurpleBox";
         setTimeout(function(){
             document.getElementById("columnDiv").style.display="none";
@@ -59,7 +60,7 @@ function boxAnimation(boxColor){
         sectionObj.section = 'marketing';
         sectionObj.boxColor = boxColor;
         console.log(sectionObj);
-        
+
         document.getElementById("demo").className += " slideInBlueBox";
         setTimeout(function(){
             document.getElementById("columnDiv").style.display="none";
@@ -74,7 +75,7 @@ function boxAnimation(boxColor){
         sectionObj.section = 'content';
         sectionObj.boxColor = boxColor;
         console.log(sectionObj);
-        
+
         document.getElementById("demo").className += " slideInRedBox";
         setTimeout(function(){
             document.getElementById("columnDiv").style.display="none";
@@ -673,13 +674,5 @@ function contactLink() {
 function testing() {
     console.log('FTS');
     // $('#enterpriseView').scrollTop(0);
-    
+
 }
-
-
-
-
-
-
-
-
