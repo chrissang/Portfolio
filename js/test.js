@@ -1,10 +1,8 @@
 console.log('test.js ran');
-console.log('aaaaaaaaa');
-console.log('aaaaaaaaa');
-console.log('aaaaaaaaa');
-console.log('aaaaaaaaa');
-console.log('aaaaaaaaa');
-console.log('aaaaaaaaa');
+console.log('zzzzzzzzzzzz');
+console.log('111111111');
+console.log('222222222');
+console.log('333333333');
 //sections:[home,enterprise,entertainment,kids,marketing]
 var section = "home";
 var sectionObj = new Object();
