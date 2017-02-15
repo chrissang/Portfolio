@@ -5,7 +5,6 @@ console.log('aaaaaaaaa');
 console.log('aaaaaaaaa');
 console.log('aaaaaaaaa');
 console.log('aaaaaaaaa');
->>>>>>> f40a009... added aaaaa
 //sections:[home,enterprise,entertainment,kids,marketing]
 var section = "home";
 var sectionObj = new Object();
